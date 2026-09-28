@@ -17,6 +17,7 @@ a:hover{color:#6d4a0d}
 
 /* Skip link */
 .skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#161310;font-weight:700;padding:.8rem 1.2rem;z-index:200;border-radius:0 0 8px 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .skip:focus{left:0}
 
 /* Header */
