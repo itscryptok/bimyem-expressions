@@ -167,3 +167,7 @@ body{padding-bottom:6.5rem}
   .main-nav[hidden]{display:none}
   .main-nav a{width:100%}
 }
+
+.plain-link{color:inherit;text-decoration:none}
+.plain-link:visited{color:inherit}
+.plain-link:hover,.plain-link:focus-visible{color:inherit;text-decoration:none}
