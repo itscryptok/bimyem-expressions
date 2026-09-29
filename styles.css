@@ -171,3 +171,6 @@ body{padding-bottom:6.5rem}
 .plain-link{color:inherit;text-decoration:none}
 .plain-link:visited{color:inherit}
 .plain-link:hover,.plain-link:focus-visible{color:inherit;text-decoration:none}
+
+.social-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:.35rem 0 0}
+.btn-sm{padding:.55rem 1.05rem;font-size:.9rem;border-radius:999px}
