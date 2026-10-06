@@ -1,0 +1,59 @@
+/* Bimyem Expressions — chat widget. Light cards always set explicit dark text (night-mode safe). */
+.bx-fab{position:fixed;right:1rem;bottom:5.9rem;z-index:200;width:60px;height:60px;border-radius:50%;
+  border:2px solid #f0cd7a;background:linear-gradient(135deg,#f0cd7a,#d9a93b);color:#1c150a;
+  font-size:1.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .18s ease}
+.bx-fab:hover{transform:scale(1.07)}
+.bx-fab .bx-dot{position:absolute;top:2px;right:2px;width:14px;height:14px;border-radius:50%;
+  background:#c0392b;border:2px solid #fff}
+.bx-fab .bx-dot[hidden]{display:none}
+@media(min-width:760px){.bx-fab{bottom:1.6rem}}
+
+.bx-panel{position:fixed;right:.8rem;bottom:10.4rem;z-index:201;width:min(92vw,378px);
+  max-height:min(70vh,560px);display:flex;flex-direction:column;overflow:hidden;
+  background:#faf6ec;border:1px solid #e5dcc8;border-radius:18px;
+  box-shadow:0 24px 60px rgba(0,0,0,.4);opacity:1;transform:translateY(0);
+  transition:opacity .22s ease,transform .22s ease}
+.bx-panel[hidden]{display:none}
+@media(min-width:760px){.bx-panel{bottom:6.2rem}}
+
+.bx-head{background:#161310;color:#faf6ec;padding:.85rem 1rem;display:flex;align-items:center;gap:.7rem}
+.bx-head .bx-ava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f0cd7a,#d9a93b);
+  color:#1c150a;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex:none}
+.bx-head strong{display:block;font-size:1rem;line-height:1.2}
+.bx-head small{display:block;color:#f0cd7a;font-size:.75rem}
+.bx-close{margin-left:auto;background:none;border:0;color:#faf6ec;font-size:1.6rem;line-height:1;
+  cursor:pointer;padding:.4rem;min-width:44px;min-height:44px}
+.bx-close:hover{color:#f0cd7a}
+
+.bx-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;
+  background:#faf6ec;min-height:180px}
+.bx-msg{max-width:85%;padding:.65rem .9rem;border-radius:14px;font-size:.94rem;line-height:1.5;
+  animation:bxIn .2s ease}
+@keyframes bxIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.bx-bot{background:#ffffff;color:#141414;border:1px solid #e5dcc8;border-bottom-left-radius:4px;align-self:flex-start}
+.bx-bot a{color:#8a5f12;font-weight:700}
+.bx-user{background:linear-gradient(135deg,#f0cd7a,#d9a93b);color:#1c150a;border-bottom-right-radius:4px;align-self:flex-end}
+.bx-typing{align-self:flex-start;background:#ffffff;color:#141414;border:1px solid #e5dcc8;
+  border-radius:14px;border-bottom-left-radius:4px;padding:.65rem .9rem;font-size:.94rem}
+.bx-typing i{display:inline-block;width:7px;height:7px;margin-right:4px;border-radius:50%;background:#8a5f12;
+  animation:bxBlink 1s infinite}
+.bx-typing i:nth-child(2){animation-delay:.2s}.bx-typing i:nth-child(3){animation-delay:.4s;margin-right:0}
+@keyframes bxBlink{0%,100%{opacity:.25}50%{opacity:1}}
+
+.bx-cta{display:inline-block;margin-top:.5rem;background:linear-gradient(135deg,#f0cd7a,#d9a93b);
+  color:#1c150a!important;font-weight:800;text-decoration:none;border-radius:999px;padding:.6rem 1.2rem;font-size:.92rem}
+.bx-cta:hover{color:#1c150a}
+
+.bx-quick{display:flex;flex-wrap:wrap;gap:.45rem;padding:.6rem .8rem;background:#faf6ec;border-top:1px solid #e5dcc8}
+.bx-quick button{background:#fff;color:#141414;border:1.5px solid #d9a93b;border-radius:999px;
+  padding:.45rem .85rem;font-size:.85rem;font-weight:700;cursor:pointer}
+.bx-quick button:hover{background:#d9a93b;color:#1c150a}
+
+.bx-form{display:flex;gap:.5rem;padding:.7rem .8rem;background:#faf6ec;border-top:1px solid #e5dcc8}
+.bx-form input{flex:1;border:1.5px solid #e5dcc8;border-radius:999px;padding:.65rem 1rem;font-size:.95rem;
+  background:#ffffff;color:#141414}
+.bx-form input:focus{outline:2px solid #d9a93b;border-color:#d9a93b}
+.bx-form button{flex:none;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  background:linear-gradient(135deg,#f0cd7a,#d9a93b);color:#1c150a;font-size:1.15rem}
+@media (prefers-reduced-motion:reduce){.bx-fab,.bx-panel,.bx-msg{transition:none;animation:none}}
